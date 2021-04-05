@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "DeleteFriend";
+}
+
+<h2>DeleteFriend</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        ProductID : <input type="text" name="FriendID" value=@Model.FriendID readonly />
+    </div>
+    <div>
+        ProductName : <input type="text" name="FriendName" value=@Model.FriendName readonly />
+    </div>
+    <div>
+        Product Description : <input type="text" name="Place" value=@Model.Place readonly />
+    </div>
+    
+    <div>
+        <input type="submit" value="Delete" />
+    </div>
+}
+@Html.ActionLink("<<Back to Select", "GetFriend")

@@ -1,0 +1,19 @@
+﻿@model FriendMVC.Models.Friend
+@{ ViewBag.Title = "UpdateFriend"; }
+
+<h2>UpdateFriend</h2>
+@using (Html.BeginForm())
+{
+<div>
+Friend ID: <input type="text" name="FriendID" value=@Model.FriendID readonly />
+</div>
+<div>
+ Friend Name: <input type="text" name="FriendName" value=@Model.FriendName />
+</div>
+ <div>
+Friend Name: <input type="text" name="Place" value=@Model.Place />
+</div>
+<div>
+<input type="submit" value="Update" />
+</div>
+}

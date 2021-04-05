@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FriendMVC.Models.Friend>
+@{
+    ViewBag.Title = "GetFriend";
+}
+
+<h2>GetFriend</h2>
+<table border="1">
+    <tr>
+        <th>Friend ID</th>
+        <th>Friend Name</th>
+        <th>Place</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.FriendID</td>
+            <td>@m.FriendName</td>
+            <td>@m.Place</td>
+            
+            <td>@Html.ActionLink("Edit " + m.FriendID, "UpdateFriend", "Friend", new { id = m.FriendID }, null)</td>
+            <td>@Html.ActionLink("Delete " + m.FriendID, "DeleteFriend", "Friend", new { id = m.FriendID }, null)</td>
+        </tr>
+    }

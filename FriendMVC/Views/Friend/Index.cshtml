@@ -1,0 +1,27 @@
+﻿@model FriendMVC.Models.Friend
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Add a Friend</h2>
+
+<form method="post">
+    @Html.ValidationSummary(true)
+    <div>
+        Friend ID
+        @Html.TextBoxFor(x => x.FriendID)
+        @Html.ValidationMessageFor(x => x.FriendID)
+    </div><br />
+    <div>
+        Friend Name
+        @Html.TextBoxFor(x => x.FriendName)
+        @Html.ValidationMessageFor(x => x.FriendName)
+    </div><br />
+    <div>
+        Place
+        @Html.TextBoxFor(x => x.Place)
+        @Html.ValidationMessageFor(x => x.Place)
+    </div><br />
+    <input type="submit" value="Add Friend"/>
+</form>
+
